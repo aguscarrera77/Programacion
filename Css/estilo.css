@@ -1,5 +1,52 @@
+/* Indicadores o Selectores
+universal: aplicada a todo el archivo html *
+etiqueta: nombro la etiqueta que le voy a aplicar el estilo ej: p,img.
+clase: html: atributo class. css: .nombre de la clase.
+id: html:atributo id. Css: #nombre del id.*/
 * {
+margin: 0px;
+    
+}
+footer {
+ margin-left: 8px;
+ background-color: rgb(244, 243, 242);
+ background-image:url(Imagenes/stone.png) ;
+ background-repeat: repeat;
+ 
+ 
+}
 
-margin-left: 8px;
+/*color: cambia el color de la fuente.
+background-color:color de fondo*
+background-image: agregar una imagen al fondo.
+background-size:cover/contain
+background-repeat:repeat/no-repeat/repeat-y/repeat-x.
+font-family: familia de la fuente.
+font-size: tamano de la fuente.Valores mejor en px.
+font-weight: grosor de la fuente.
+
+
+*/
+article p {
+
+font-family:'roboto','arial';
+color: rgb(62, 3, 3);
+font-size: small;
+font-weight:normal;
+
+
+
 
 }
+
+legend {
+color:blue;
+
+}
+label{
+color:#040900;
+
+}
+
+
+
