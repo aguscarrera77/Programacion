@@ -3,14 +3,17 @@ universal: aplicada a todo el archivo html *
 etiqueta: nombro la etiqueta que le voy a aplicar el estilo ej: p,img.
 clase: html: atributo class. css: .nombre de la clase.
 id: html:atributo id. Css: #nombre del id.*/
+
+
 * {
 margin: 0px;
+
     
 }
 footer {
  margin-left: 8px;
  background-color: rgb(244, 243, 242);
- background-image:url(Imagenes/stone.png) ;
+ 
  background-repeat: repeat;
  
  
@@ -24,23 +27,29 @@ background-repeat:repeat/no-repeat/repeat-y/repeat-x.
 font-family: familia de la fuente.
 font-size: tamano de la fuente.Valores mejor en px.
 font-weight: grosor de la fuente.
-
-
+text-align: ubica los elementos de la tabla. Valores:left right center justify.
+text-decoration: decorar el texto. valores: underline,none,overline,line-through.
+text-transform: cambia minuscula,mayusculas.valores: upper,lower.
+border: bordes de la caja.
+widht ancho.
+height alto.
 */
-article p {
+article .texto1 {
+    font-family: "Roboto";
+    font-size: x-large;
 
-font-family:'roboto','arial';
-color: rgb(62, 3, 3);
-font-size: small;
-font-weight:normal;
-
-
+    
+    }
 
 
-}
+
+
+
 
 legend {
 color:blue;
+font-family: "Roboto";
+text-transform: uppercase;
 
 }
 label{
@@ -48,5 +57,32 @@ color:#040900;
 
 }
 
+.texto1 {
+font-family: "Roboto";
+font-size: x-large;
+
+}
+.navegador .menu1 {
+
+text-align:center;
 
 
+}
+
+.menu1 li a{
+text-decoration: none;
+
+
+}
+
+.encabezado {
+
+border: 4px solid black;
+width: 90%;
+
+
+
+}
+.navegador {
+border: 4px solid red;
+}
