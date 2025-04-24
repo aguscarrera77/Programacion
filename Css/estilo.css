@@ -31,10 +31,10 @@ font-weight: grosor de la fuente.
 text-align: ubica los elementos de la tabla. Valores:left right center justify.
 text-decoration: decorar el texto. valores: underline,none,overline,line-through.
 text-transform: cambia minuscula,mayusculas.valores: upper,lower.
-border: bordes de la caja.Y propiedades.
+border: bordes de la caja.Y propiedades.boorder-(color,style,with)
 widht ancho.
 height alto.
-enlaces: pseudoclases.
+enlaces: pseudoclases.Valores:visited,link,hover.
 */
 
 #cuerpo{
