@@ -8,12 +8,13 @@ id: html:atributo id. Css: #nombre del id.*/
 * {
 margin: 0px;
 
+
     
 }
 footer {
  margin-left: 8px;
  background-color: rgb(244, 243, 242);
- 
+ width: 95%;
  background-repeat: repeat;
  
  
@@ -30,10 +31,16 @@ font-weight: grosor de la fuente.
 text-align: ubica los elementos de la tabla. Valores:left right center justify.
 text-decoration: decorar el texto. valores: underline,none,overline,line-through.
 text-transform: cambia minuscula,mayusculas.valores: upper,lower.
-border: bordes de la caja.
+border: bordes de la caja.Y propiedades.
 widht ancho.
 height alto.
+enlaces: pseudoclases.
 */
+
+#cuerpo{
+    max-width: 1200px;
+    margin-left: 8px;
+}
 article .texto1 {
     font-family: "Roboto";
     font-size: x-large;
@@ -71,18 +78,93 @@ text-align:center;
 
 .menu1 li a{
 text-decoration: none;
+border: 4px solid goldenrod;
+
+}
+
+.menu1 li a:visited{
+color:red;
 
 
 }
+.menu1 li a:active{
+color: purple;
+font-size: xx-large;
+
+}
+
+.menu1 li a:hover{
+color:deeppink;
+font-size: xx-large;
+font-weight: bold;
+font-family:'Roboto' ;
+
+
+}
+
 
 .encabezado {
 
 border: 4px solid black;
 width: 90%;
+height: 250px;
 
 
 
 }
 .navegador {
 border: 4px solid red;
+}
+
+.menu1 {
+
+ border: 3px solid blue;   
+}
+
+.menu1 li {
+
+border: 2px double green;
+
+}
+.principal{
+border: 5px solid black;
+width: 90%;
+height: 600px;
+}
+.seccion1,.seccion2,.seccion3{
+border: 3px solid brown;
+height: 250px;
+
+}
+.seccion1,.seccion2{
+margin-top: 5px;
+}
+article,.texto1{
+border:2px solid greenyellow;
+
+}
+.seccion3{
+    width: 90%;
+}
+.publi{
+border:5px double 
+orangered;
+width: 90%;
+height: 200px;
+}
+
+fieldset{
+border-width: 2px;
+border-color: aqua;
+border-style: groove;
+border-radius: 8px;
+
+
+
+}
+
+.publi a{
+color: chartreuse;
+text-decoration: none;
+
 }
