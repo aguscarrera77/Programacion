@@ -9,186 +9,158 @@ id: html:atributo id. Css: #nombre del id.*/
 margin: 0px;
 
 max-width: 1200px;
-    
-}
-footer {
- margin-left: 8px;
- background-color: rgb(244, 243, 242);
- width: 90%;
- background-repeat: repeat;
- margin-top: 40px;
- 
- 
-}
+    }
+ #cuerpo{
+       
+        margin-left: 8px;
+        padding:20px;
+        background-color: aliceblue;}
 
-/*color: cambia el color de la fuente.
-background-color:color de fondo*
-background-image: agregar una imagen al fondo.
-background-size:cover/contain
-background-repeat:repeat/no-repeat/repeat-y/repeat-x.
-font-family: familia de la fuente.
-font-size: tamano de la fuente.Valores mejor en px.
-font-weight: grosor de la fuente.
-text-align: ubica los elementos de la tabla. Valores:left right center justify.
-text-decoration: decorar el texto. valores: underline,none,overline,line-through.
-text-transform: cambia minuscula,mayusculas.valores: upper,lower.
-border: bordes de la caja.Y propiedades.boorder-(color,style,with)
-widht ancho.
-height alto.
-enlaces: pseudoclases.Valores:visited,link,hover.
-list-style-type: estilo de la viñeta.
-    valores: none(muy usado en los menues).disc(valor por default)
-square,decimal(valores numericos en lista ol)
-decimal-leading-zero,upper-alpha,lower-alpha,lower/upper-roman,
-list-style-image: imagen a la viñeta.valor url().
-margin:espacio externo entre las cajas.Espacio Externo.
-padding: espacio entre el elemento y los bordes. Espacio Interno.
+  .encabezado {
+   
+            border: 4px solid black;
+            width: 95%;
+            height: 250px;
+            background-color: rgb(210, 210, 242);
+            padding: 20px;/*regla de diseño*/
+            }
+            .titulo {
+                text-align: center;
+                text-decoration: underline;
+                
+                
+                
+                }
+             
+                
+ .navegador {
+                border: 4px solid red;
+                border-radius: 8px;
+                }
+                .menu1 {
+   
+       
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    text-align: center;
+                
+                    
+                
+                
+                   }
+
+                   .menu1 li {
+   
+                    border: 2px double green;
+                    margin-top: 10px;
+                    }
+                    .menu1 li a{
+                        text-decoration: none;
+                        border: 4px solid goldenrod;
+                        padding:0 250px;
+                        display: inline-block;
+                        
+                        }
+                        
+                        .menu1 li a:visited{
+                        color:red;
+                        
+                        
+                        }
+                        .menu1 li a:active{
+                        color: purple;
+                        font-size: xx-large;
+                        
+                        }
+                        
+                        .menu1 li a:hover{
+                        color:deeppink;
+                        font-size: xx-large;
+                        font-weight: bold;
+                        font-family:'Roboto' ;
+                        
+                        
+                        }
+                        .principal{
+                            border: 5px solid black;
+                            width: 90%;
+                            height: 600px;
+                            }
+                            .seccion1,.seccion2,.seccion3{
+                            border: 3px solid brown;
+                            height: 250px;
+                            
+                            }
+                            .seccion1,.seccion2{
+                            margin-top: 5px;
+                            }
+
+                            article,.texto1{
+                                border:2px solid greenyellow;
+                                font-family: "Roboto";
+                            font-size: x-large;
+   
+                                
+                                }
+
+                                .seccion3{
+                                    width: 90%;
+                                }
+                                .publi{
+                                border:5px double 
+                                orangered;
+                                width: 90%;
+                                height: 200px;
+                                margin-bottom: 30px;
+                                }
+                                .publi a{
+                                    color: black;
+                                    text-decoration: none;
+                                    
+                                    }
+                                    
+                                    .inicio:hover{
+                                    color:aliceblue;
+                                    background-color:black ;
+                                    
+                                    
+                                    }
+                                    footer {
+                                        margin-left: 8px;
+                                        background-color: rgb(244, 243, 242);
+                                        width: 90%;
+                                        background-repeat: repeat;
+                                        margin-top: 40px;
+                                        
+                                        
+                                       }
+                                       
+                                       legend {
+                                        color:blue;
+                                        font-family: "Roboto";
+                                        text-transform: uppercase;
+                                        
+                                        }
+                                        label{
+                                            color:#040900;
+                                            
+                                            }
+/*Modelo de cajas: 4 componentes elemento
+padding: espacio interno entre elemento y borde.
+borde: propiedad border agrega bordes a las cajas.
+marggin: espacio externo. Espacio entre cajas vecinas.
+Ordenes para mi diseño::
+
+Inicio de mi diseño margin: 0 y padding 0. Reseteo configuracion de navegadores. 
+Body:Margen izquierdo 8px.
+header: 100% o 95% segun la maquetacion.
+darle color.
+titulo de header: centrar.
+Menu: posicionar mi menu de manera horizontal.
+    espacios entre botones.
+    sacamos viñetas.
+    sacamos subrayado a los enlaces.
+
 */
 
-#cuerpo{
-    
-    margin-left: 8px;
-}
-article .texto1 {
-    font-family: "Roboto";
-    font-size: x-large;
-
-    
-    }
-
-
-
-
-
-
-legend {
-color:blue;
-font-family: "Roboto";
-text-transform: uppercase;
-
-}
-label{
-color:#040900;
-
-}
-
-.texto1 {
-font-family: "Roboto";
-font-size: x-large;
-
-}
-.navegador .menu1 {
-
-text-align:center;
-
-
-}
-.menu1 {
-
-    border: 3px solid blue; 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
-
-   
-   }
-   
-.menu1 li a{
-text-decoration: none;
-border: 4px solid goldenrod;
-padding:0 250px;
-}
-
-.menu1 li a:visited{
-color:red;
-
-
-}
-.menu1 li a:active{
-color: purple;
-font-size: xx-large;
-
-}
-
-.menu1 li a:hover{
-color:deeppink;
-font-size: xx-large;
-font-weight: bold;
-font-family:'Roboto' ;
-
-
-}
-
-
-.encabezado {
-
-border: 4px solid black;
-width: 90%;
-height: 250px;
-margin-top: 45px;
-
-
-
-}
-.navegador {
-border: 4px solid red;
-}
-
-
-
-.menu1 li {
-
-border: 2px double green;
-
-}
-.principal{
-border: 5px solid black;
-width: 90%;
-height: 600px;
-}
-.seccion1,.seccion2,.seccion3{
-border: 3px solid brown;
-height: 250px;
-
-}
-.seccion1,.seccion2{
-margin-top: 5px;
-}
-article,.texto1{
-border:2px solid greenyellow;
-
-}
-.seccion3{
-    width: 90%;
-}
-.publi{
-border:5px double 
-orangered;
-width: 90%;
-height: 200px;
-margin-bottom: 30px;
-}
-
-fieldset{
-border-width: 2px;
-border-color: aqua;
-border-style: groove;
-border-radius: 8px;
-
-
-
-}
-
-.publi a{
-color: black;
-text-decoration: none;
-
-}
-
-.inicio:hover{
-color:aliceblue;
-background-color:black ;
-
-
-}
