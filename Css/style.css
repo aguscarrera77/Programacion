@@ -1,0 +1,40 @@
+/* display: posicion de cajas
+block: ocupar todo el ancho del espacio del dise;o.Ej div.
+inline: los elementos se comporten como si fueran en linea.
+inline-block: posicion de las cajas se mantienen en linea y podes manejar las propiedads width y height.
+none: lo aplico para desaparecer una caja.
+flex: alinea las cajas una al lado de la otra activando el modelo flex-box. Display se aplica en el contenedor.
+grid: tomar las cajas y ubicarlas como si fuera una tabla.
+propiedades de grid
+grid template colums
+valores: ancho de cajas en pixeles.
+valores de fracciones: fr. fracciona el ancho de las cajas sobre un 100% del contenedor.
+*/
+
+.principal, .contenedor{
+border: 2px double black;
+height: 180px;
+padding:20px;
+margin: 10px;
+
+
+}
+
+.contenedor{
+    display:grid;
+    grid-template-columns:600px 600px  ;
+    gap:1em;
+
+}
+
+.caja1,.caja2,.caja3 {
+   border:2px solid blue;
+   background: rgb(206, 206, 247);
+   padding: 0.6rem;
+
+
+    }
+
+
+
+

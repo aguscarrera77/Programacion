@@ -2,64 +2,75 @@
 universal: aplicada a todo el archivo html *
 etiqueta: nombro la etiqueta que le voy a aplicar el estilo ej: p,img.
 clase: html: atributo class. css: .nombre de la clase.
-id: html:atributo id. Css: #nombre del id.*/
+id: html:atributo id. Css: #nombre del id.
+*/
 
 
 * {
-margin: 0px;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 
-max-width: 1200px;
     }
  #cuerpo{
        
-        margin-left: 8px;
+        color: #040900;
         padding:20px;
-        background-color: aliceblue;}
+        background-color: aliceblue;
+        font-size: 16px;
+        font-family: "Roboto",sans-serif;
+        
+
+    }
 
   .encabezado {
-   
-            border: 4px solid black;
-            width: 95%;
-            height: 250px;
-            background-color: rgb(210, 210, 242);
+            margin: 0px auto;/*centrar la caja*/
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+            background-color: rgb(242, 242, 248);
             padding: 20px;/*regla de diseño*/
+            /*position: sticky;fija menu al hacer scroll*/
+            top:0px;
             }
-            .titulo {
+.titulo {
                 text-align: center;
                 text-decoration: underline;
+                font-family: sans-serif;
                 
-                
-                
-                }
+                 }
              
                 
  .navegador {
-                border: 4px solid red;
+                border: 4px solid rgb(92, 92, 93);
                 border-radius: 8px;
                 }
                 .menu1 {
    
        
                     list-style-type: none;
-                    margin: 0;
-                    padding: 0;
+                    margin: 0;/* siempre para fabricar el menu*/
+                    padding: 0;/*siempre para fabricar el menu*/
                     text-align: center;
-                
                     
+
                 
-                
-                   }
+                    }
 
                    .menu1 li {
    
                     border: 2px double green;
                     margin-top: 10px;
+                    width: 150px;
+                    display: inline-block;
+
                     }
                     .menu1 li a{
                         text-decoration: none;
                         border: 4px solid goldenrod;
-                        padding:0 250px;
-                        display: inline-block;
+                        padding:0 0;
+                        
+
                         
                         }
                         
@@ -78,41 +89,66 @@ max-width: 1200px;
                         color:deeppink;
                         font-size: xx-large;
                         font-weight: bold;
-                        font-family:'Roboto' ;
+                        
                         
                         
                         }
                         .principal{
                             border: 5px solid black;
                             width: 90%;
-                            height: 600px;
-                            }
-                            .seccion1,.seccion2,.seccion3{
-                            border: 3px solid brown;
-                            height: 250px;
+                            position: relative;
+                            margin:0 auto;
+                            height:auto ;
                             
-                            }
-                            .seccion1,.seccion2{
-                            margin-top: 5px;
-                            }
 
-                            article,.texto1{
+                            }
+                            
+                            
+                            
+                            .seccion1,.seccion2{
+                            
+                            border: 2px solid black;
+                            height: 300px;
+                            margin:0px 10px;
+                            padding: 20px;
+                            width: 500px;
+                            }
+.seccion2{
+position:absolute;
+left: 510px;
+top:0px;
+
+
+
+
+}
+                            .seccion3{
+                                width: 90%;
+                                height:250px ;
+                                margin:0 auto ;
+                                background-color: cadetblue;
+                                border-radius: 10px;
+
+                            }
+article{margin-top: 10px;}
+
+                            .texto1{
                                 border:2px solid greenyellow;
                                 font-family: "Roboto";
-                            font-size: x-large;
+                                font-weight: bold;
+                            font-size:16px;/*regla de diseño para las fuentes*/
    
                                 
                                 }
 
-                                .seccion3{
-                                    width: 90%;
-                                }
+                                
                                 .publi{
                                 border:5px double 
                                 orangered;
                                 width: 90%;
                                 height: 200px;
-                                margin-bottom: 30px;
+                            
+                                margin:10px auto;
                                 }
                                 .publi a{
                                     color: black;
@@ -132,6 +168,7 @@ max-width: 1200px;
                                         width: 90%;
                                         background-repeat: repeat;
                                         margin-top: 40px;
+                                        margin:0 auto ;
                                         
                                         
                                        }
@@ -146,6 +183,12 @@ max-width: 1200px;
                                             color:#040900;
                                             
                                             }
+input {
+padding: 0.40rem;
+border-radius: 8px;
+margin:5px ;
+
+}
 /*Modelo de cajas: 4 componentes elemento
 padding: espacio interno entre elemento y borde.
 borde: propiedad border agrega bordes a las cajas.
