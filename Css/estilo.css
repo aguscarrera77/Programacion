@@ -184,13 +184,57 @@ article{margin-top: 10px;}
                                             
                                             }
 input {
-padding: 0.40rem;
+width: 100%;
 border-radius: 8px;
-margin:5px ;
+padding:0.5em ;
+
 
 }
-/*Modelo de cajas: 4 componentes elemento
-padding: espacio interno entre elemento y borde.
+.marco-form{
+display: grid;
+gap: 0.5em;
+grid-template-areas: 
+"nombre apellido"
+"dni mail"
+"password date"
+"textarea textarea"
+"botones-form botones-form"
+
+
+
+
+
+
+
+;
+
+
+}
+
+.nombre{
+    grid-area: nombre;
+}
+.apellido{
+    grid-area: apellido;
+
+}
+.dni{
+    grid-area: dni;
+}
+.mail{
+
+  grid-area: mail;  
+}
+.botones-form{
+    grid-area: botones-form;
+}
+textarea{
+    width: 100%;
+}
+
+
+/*
+ding: espacio interno entre elemento y borde.
 borde: propiedad border agrega bordes a las cajas.
 marggin: espacio externo. Espacio entre cajas vecinas.
 Ordenes para mi diseño::

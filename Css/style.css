@@ -9,33 +9,68 @@ propiedades de grid
 grid template colums
 valores: ancho de cajas en pixeles.
 valores de fracciones: fr. fracciona el ancho de las cajas sobre un 100% del contenedor.
+gap: espaciado entre las cajas de la grilla.
+gap-columns: espacio entre las columnas.
+gap-rows: espacio entre las filas.
+grid-rows:x/x.... marcando las lineas de la grilla siempre arranca en 1 podemos mover las cajas o que ocupen dos o mas espacios de la grilla en esta caso filas.
+grid-columns: x/x. movemos las columnas o hacemos que ocupen dos mas espacios de la grilla.
+grid-template-area: maquetamos las filas y columnas entre comillas.
+luego llamamos a cada caja con su class y agregamos la propiedad grid-area y marcamos la posicion.Ej: grid-area: "caja2 caja2 caja2"
+
+
 */
 
-.principal, .contenedor{
-border: 2px double black;
-height: 180px;
-padding:20px;
-margin: 10px;
+.principal,
+.contenedor {
+    border: 2px double black;
+    height: 180px;
+    padding: 20px;
+    margin: 10px;
 
 
 }
 
-.contenedor{
-    display:grid;
-    grid-template-columns:50% 50%;
-    gap:10px;
-    
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "caja1 caja1  caja1"
+        "caja2 caja3 caja4"
+        "caja5 caja5 caja5"
+
+
+    ;
+    gap: 5px;
+    padding: 0.5rem;
+
 
 }
 
-.caja1,.caja2,.caja3,.caja4,.caja5 {
-   border:2px solid blue;
-   background: rgb(206, 206, 247);
-   padding: 0.6rem;
+.caja1,
+.caja2,
+.caja3,
+.caja4,
+.caja5 {
+    border: 2px solid blue;
+    background: rgb(206, 206, 247);
+    padding: 0.6rem;
+}
 
+.caja2 {
+    grid-area: caja2;
+}
 
-    }
+.caja1 {
 
+    grid-area: caja1;
+}
+.caja4{
+grid-area: caja4;
 
+}
 
+.caja5{
+grid-area: caja5;
 
+}

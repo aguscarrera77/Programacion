@@ -56,44 +56,48 @@ El centro de formacion esta conveniado con UPCN.
 <footer class="pie">
    
    <form action="datos.html " method="post">
-    <fieldset>
+    
+      <fieldset class="marco-form">
        <legend>Formulario de Contacto.</legend>
+       <div class="nombre"> 
        <label for="nombre">Nombre</label>
     <input id="nombre" type="text">
+       </div>
+       <div class="apellido">
      <label for="apellido">Apellido</label> 
        <input id="apellido" type="text" required> 
-    
-    
+       </div>
+    <div class="dni">
     <label for="dni">Dni</label>
        <input id="dni" type="number">
+    </div>
+    <div class="mail">
     <label for="mail">Correo Electronico</label>
     <input id="mail" type="email">
+    </div>
+    <div class="password">
     <label for="pass">Contraseña</label>
     <input id="pass" type="password">
-    
-    
+    </div>
+    <div class="date">
     <label for="date">Fecha de nacimiento</label>
     <input type="date" id="date">
-    <br> <br>
-    <label for="archivo">Subir archivo.</label>
-    <input type="file" id="archivo">
+    
+    </div>
     
     
-    <label for="check">Seleccione una opcion.
-       <input type="checkbox" id="check" value="Douglas"> Douglas Haig.
-       <input type="checkbox" id="check" value="Defensores"> Defensores de Villa Ramallo.
-    </label>
+   <div class="textarea">
+    <label for="comentarios">Dejanos tu opinion.</label>
+   
+    <textarea name="" id="comentarios" rows="20" cols="30"></textarea>
+   </div>
+    <div class="botones-form">
     <input type="submit" value="Enviar">
     <input type="reset" value="Restablecer">
-    
-    
-       <br><br>
-    <label for="comentarios">Dejanos tu opinion.</label>
-    <br>
-    <textarea name="" id="comentarios" rows="20" cols="20"></textarea>
-    
+    </div>
     
     </fieldset>
+    
     </form>
 </footer>
 
