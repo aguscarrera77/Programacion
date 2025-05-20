@@ -16,36 +16,36 @@ grid-rows:x/x.... marcando las lineas de la grilla siempre arranca en 1 podemos 
 grid-columns: x/x. movemos las columnas o hacemos que ocupen dos mas espacios de la grilla.
 grid-template-area: maquetamos las filas y columnas entre comillas.
 luego llamamos a cada caja con su class y agregamos la propiedad grid-area y marcamos la posicion.Ej: grid-area: "caja2 caja2 caja2"
-
+flex: coloca las cajas una al lado de la otra de manera horizontal.
+flex-direction: da la orden de cual sera el eje principal.
+valores=> row: en fila de izquierda a derecha.
+        center: centra las cajas.
+        columns: columnas de arriba hacia abajo.
+justify;-content: alinea elementos en el eje principal.
+valores=> flex-star,flex-end,center,space-between,space-around,space-evenly.
+align-items: ordena las cajas hijas en el eje cruzado al principal.valores=> stretch,flex-start,flex-end,center,baseline(alinea texto).
 
 */
 
 .principal,
 .contenedor {
     border: 2px double black;
-    height: 180px;
+    height: 780px;
     padding: 20px;
     margin: 10px;
 
 
 }
-
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-        "caja1 caja1  caja1"
-        "caja2 caja3 caja4"
-        "caja5 caja5 caja5"
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 
 
-    ;
-    gap: 5px;
-    padding: 0.5rem;
-
-
+    
 }
+
+
 
 .caja1,
 .caja2,
@@ -55,22 +55,5 @@ luego llamamos a cada caja con su class y agregamos la propiedad grid-area y mar
     border: 2px solid blue;
     background: rgb(206, 206, 247);
     padding: 0.6rem;
-}
-
-.caja2 {
-    grid-area: caja2;
-}
-
-.caja1 {
-
-    grid-area: caja1;
-}
-.caja4{
-grid-area: caja4;
-
-}
-
-.caja5{
-grid-area: caja5;
-
+    
 }

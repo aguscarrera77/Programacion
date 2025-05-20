@@ -47,11 +47,12 @@ box-sizing: border-box;
                 }
                 .menu1 {
    
-       
+                display: flex;
                     list-style-type: none;
                     margin: 0;/* siempre para fabricar el menu*/
                     padding: 0;/*siempre para fabricar el menu*/
                     text-align: center;
+                    justify-content: space-evenly;
                     
 
                 
@@ -59,16 +60,17 @@ box-sizing: border-box;
 
                    .menu1 li {
    
-                    border: 2px double green;
+                
                     margin-top: 10px;
                     width: 150px;
-                    display: inline-block;
+                    
 
                     }
                     .menu1 li a{
                         text-decoration: none;
-                        border: 4px solid goldenrod;
+                    
                         padding:0 0;
+                        display: block;
                         
 
                         
@@ -96,33 +98,42 @@ box-sizing: border-box;
                         .principal{
                             border: 5px solid black;
                             width: 90%;
-                            position: relative;
-                            margin:0 auto;
-                            height:auto ;
+                        margin:0 auto;
                             
+                            display: grid;
+                            grid-template-areas: 
+                            "seccion1 seccion2"
+                            "articulo articulo"
+                            
+                            
+                            
+                            
+                            ;
 
                             }
                             
-                            
-                            
                             .seccion1,.seccion2{
-                            
+                            height: 800px;
                             border: 2px solid black;
-                            height: 300px;
-                            margin:0px 10px;
+                            margin:10px 10px;
                             padding: 20px;
                             width: 500px;
                             }
-.seccion2{
-position:absolute;
-left: 510px;
-top:0px;
+
+  .seccion1{
+    grid-area: seccion1;
+  }
+  .seccion2{
+    grid-area: seccion2;
+  }
+
+  .articulo{
+    grid-area: articulo;
+    margin:0.8em;
+  }
 
 
-
-
-}
-                            .seccion3{
+   .seccion3{
                                 width: 90%;
                                 height:250px ;
                                 margin:0 auto ;
@@ -181,30 +192,28 @@ article{margin-top: 10px;}
                                         }
                                         label{
                                             color:#040900;
+                                            font-weight: bold;
                                             
                                             }
 input {
-width: 100%;
+width: 95%;
 border-radius: 8px;
 padding:0.5em ;
+
 
 
 }
 .marco-form{
 display: grid;
-gap: 0.5em;
+gap: 0.8em;
+padding: 1em;
+grid-template-columns: repeat(2,1fr);
 grid-template-areas: 
 "nombre apellido"
 "dni mail"
 "password date"
 "textarea textarea"
 "botones-form botones-form"
-
-
-
-
-
-
 
 ;
 
@@ -227,10 +236,34 @@ grid-template-areas:
 }
 .botones-form{
     grid-area: botones-form;
+    gap: 10px;
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    
+
+
+    
+    
 }
+.textarea{
+    grid-area: textarea;
+    margin: 0 ;
+
+
+}
+    
+
 textarea{
     width: 100%;
-}
+    border-radius: 0.5em;
+    border: 2px double darkkhaki;
+    
+}  
+  
+    
+
 
 
 /*
