@@ -24,36 +24,18 @@ valores=> row: en fila de izquierda a derecha.
 justify;-content: alinea elementos en el eje principal.
 valores=> flex-star,flex-end,center,space-between,space-around,space-evenly.
 align-items: ordena las cajas hijas en el eje cruzado al principal.valores=> stretch,flex-start,flex-end,center,baseline(alinea texto).
+flex-wrap: agrega una linea en nuestro contenedor si la suma de todas las cajas supera el total del ancho/alto del contenedor.
+align-content: acomodar el salto de linea en el eje cruzado.
+CONDICIONES PARA SU FUNCION: que haya multilineas o multicolumnas.
+                            que este activo el flex-wrap.
+                            que la suma total del ancho o alta de las cajas supere al ancho o alto total del contenedor.
+<--------------------------------------------------------->
+PROPIEDADES DE FLEX PARA CAJAS HIJAS.
+Order: darle una ubicacion a una caja en particular.
+flex-grow: en la caja donde la aplicas la propiedad aumentara su ancho de acuerdo al espacio disponible en el contenedor.
+flex-shrink: las cajas se contraen en relacion a las cajas y al espacio que sobre en el contendor.
+flex-basis es darle un witdh inicial a una caja.
+en flex-box reemplaza al witdh.
+flex-grow: 1 (inicio).
 
 */
-
-.principal,
-.contenedor {
-    border: 2px double black;
-    height: 780px;
-    padding: 20px;
-    margin: 10px;
-
-
-}
-.contenedor{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-
-    
-}
-
-
-
-.caja1,
-.caja2,
-.caja3,
-.caja4,
-.caja5 {
-    border: 2px solid blue;
-    background: rgb(206, 206, 247);
-    padding: 0.6rem;
-    
-}

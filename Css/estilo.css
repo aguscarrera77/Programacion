@@ -27,32 +27,55 @@ box-sizing: border-box;
             margin: 0px auto;/*centrar la caja*/
             border-radius: 8px;
             width: 100%;
+            max-width: 1200px;
             height: auto;
             background-color: rgb(242, 242, 248);
             padding: 20px;/*regla de diseño*/
             /*position: sticky;fija menu al hacer scroll*/
             top:0px;
-            }
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+        
+ }
+.logo{
+width: 540px;
+height: 200px;
+}
 .titulo {
                 text-align: center;
                 text-decoration: underline;
                 font-family: sans-serif;
                 
                  }
-             
+.box-superior{
+display:flex;
+justify-content: space-between;
+flex-direction: row-reverse;
+
+}
+.logo-box{
+    flex:0 0 auto;
+}
+.titulo-box{
+display: flex;
+align-items: center;
+
+}
                 
  .navegador {
                 border: 4px solid rgb(92, 92, 93);
                 border-radius: 8px;
+            
                 }
                 .menu1 {
    
-                display: flex;
+                
                     list-style-type: none;
                     margin: 0;/* siempre para fabricar el menu*/
                     padding: 0;/*siempre para fabricar el menu*/
                     text-align: center;
-                    justify-content: space-evenly;
+                    
                     
 
                 
