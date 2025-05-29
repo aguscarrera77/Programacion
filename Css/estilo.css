@@ -41,11 +41,16 @@ box-sizing: border-box;
 .logo{
 width: 540px;
 height: 200px;
+border-radius: 10px;
 }
 .titulo {
                 text-align: center;
                 text-decoration: underline;
                 font-family: sans-serif;
+                font-size: 2rem;
+                margin: 0;
+                padding: 0.5;
+                
                 
                  }
 .box-superior{
@@ -57,6 +62,7 @@ flex-direction: row-reverse;
 .logo-box{
     flex:0 0 auto;
 }
+
 .titulo-box{
 display: flex;
 align-items: center;
@@ -64,60 +70,35 @@ align-items: center;
 }
                 
  .navegador {
-                border: 4px solid rgb(92, 92, 93);
-                border-radius: 8px;
-            
-                }
-                .menu1 {
-   
-                
-                    list-style-type: none;
-                    margin: 0;/* siempre para fabricar el menu*/
-                    padding: 0;/*siempre para fabricar el menu*/
-                    text-align: center;
-                    
-                    
+  background-color: #003366;
+  padding: 10px 0;
+}
 
-                
-                    }
+.menu1 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
 
-                   .menu1 li {
-   
-                
-                    margin-top: 10px;
-                    width: 150px;
-                    
+.menu1 li {
+  margin: 0 15px;
+}
 
-                    }
-                    .menu1 li a{
-                        text-decoration: none;
-                    
-                        padding:0 0;
-                        display: block;
-                        
+.menu1 li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
 
-                        
-                        }
-                        
-                        .menu1 li a:visited{
-                        color:red;
-                        
-                        
-                        }
-                        .menu1 li a:active{
-                        color: purple;
-                        font-size: xx-large;
-                        
-                        }
-                        
-                        .menu1 li a:hover{
-                        color:deeppink;
-                        font-size: xx-large;
-                        font-weight: bold;
-                        
-                        
-                        
-                        }
+.menu1 li a:hover {
+  background-color: #ffffff33;
+  color: #ffcc00;
+}
                         .principal{
                             border: 5px solid black;
                             width: 90%;

@@ -39,3 +39,30 @@ en flex-box reemplaza al witdh.
 flex-grow: 1 (inicio).
 
 */
+.principal {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contenedor div {
+  width: 120px;
+  height: 100px;
+  background-color: cadetblue;
+  color: rgb(52, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+  
+}
