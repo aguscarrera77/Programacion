@@ -37,7 +37,10 @@ flex-shrink: las cajas se contraen en relacion a las cajas y al espacio que sobr
 flex-basis es darle un witdh inicial a una caja.
 en flex-box reemplaza al witdh.
 flex-grow: 1 (inicio).
-
+<<<<<<<<<<<<<<<<<<< TRANSFORM TRANSITION ANIMATION>>>>>>>>>>>
+TRANSFORM
+TRANSITION
+ANIMATION
 */
 .principal {
   font-size: 1.5rem;
@@ -65,4 +68,57 @@ flex-grow: 1 (inicio).
   font-weight: bold;
   border-radius: 8px;
   
+}
+
+.caja1{
+  animation-name: rotar;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+@keyframes rotar{
+0%{ transform: rotate(0deg);}
+50%{transform:rotate(360deg);}
+100%{transform: rotate(720deg);        }
+
+}
+
+.caja2{
+  animation-name: zoom;
+  animation-duration:2s ;
+  animation-iteration-count: 3;
+}
+
+@keyframes zoom{
+0%{ transform: scale(1);   }
+50%{transform: scale(4);}
+100%{transform: scale(1);}
+}
+
+.caja3{
+animation-name: moviendo;
+animation-duration: 300s;
+animation-iteration-count: 1;
+animation-direction: alternate;
+}
+
+@keyframes moviendo{
+from{transform: translate(0px);}
+to{transform: translate(150px);}
+
+
+}
+
+.caja4{
+
+animation-name: invisible;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+
+}
+
+@keyframes invisible{
+0%{transform:translateY(20px); opacity:0;}
+100%{transform: translateY(0px);opacity: 1;}
+
 }

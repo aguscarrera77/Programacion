@@ -42,7 +42,9 @@ box-sizing: border-box;
 width: 540px;
 height: 200px;
 border-radius: 10px;
+
 }
+
 .titulo {
                 text-align: center;
                 text-decoration: underline;
@@ -91,7 +93,7 @@ align-items: center;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 12px;
-  transition: background-color 0.3s, color 0.3s;
+  
   border-radius: 4px;
 }
 
