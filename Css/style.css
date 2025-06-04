@@ -38,9 +38,9 @@ flex-basis es darle un witdh inicial a una caja.
 en flex-box reemplaza al witdh.
 flex-grow: 1 (inicio).
 <<<<<<<<<<<<<<<<<<< TRANSFORM TRANSITION ANIMATION>>>>>>>>>>>
-TRANSFORM
-TRANSITION
-ANIMATION
+TRANSFORM: transforma el elemento con alguna propiedad.Translate/rotate/scale/skew
+TRANSITION: controla el tiempo y la forma que se transforma el elemento. Sintaxis:transition: propiedad duracion efecto(timing-function) retardo(delay);
+ANIMATION: animaciones que pausan,repiten,ir y volver... se definen por pasos y a traves de @keyframes.
 */
 .principal {
   font-size: 1.5rem;
