@@ -41,7 +41,7 @@ flex-grow: 1 (inicio).
 TRANSFORM: transforma el elemento con alguna propiedad.Translate/rotate/scale/skew
 TRANSITION: controla el tiempo y la forma que se transforma el elemento. Sintaxis:transition: propiedad duracion efecto(timing-function) retardo(delay);
 ANIMATION: animaciones que pausan,repiten,ir y volver... se definen por pasos y a traves de @keyframes.
-*/
+
 .principal {
   font-size: 1.5rem;
   font-weight: bold;
@@ -121,4 +121,234 @@ animation-timing-function: ease-in-out;
 0%{transform:translateY(20px); opacity:0;}
 100%{transform: translateY(0px);opacity: 1;}
 
+}
+*{
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+font-family: sans-serif;
+background: #f0f0f0;
+
+}
+.contenedor{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-areas: 
+"caja1 caja2 caja4"
+"caja1 caja3 caja4"
+"caja5 caja5 caja5"
+;
+grid-auto-rows: 200px;
+gap:1em;
+padding:1.4em;
+max-width: 1200px;
+
+
+
+}
+
+.contenedor div{
+display: flex;
+justify-content: center;
+align-items: center;
+
+color:white;
+font-size: 1.5em;
+font-weight: bold;
+border-radius: 10px;
+box-shadow: 0px 4px 10px #000;
+text-shadow: 1px 1px 2px #000;
+
+
+
+
+
+}
+
+ .caja1{
+  grid-area: caja1;
+  background-color: #8ecae6;
+ }
+ .caja2{
+  grid-area: caja2;
+  background-color: #219ebc;
+ }
+
+ .caja3{
+  grid-area:caja3;
+  background-color: #023047;
+ }
+ 
+ .caja4{
+  grid-area: caja4;
+  background-color: #ffb703;
+ }
+ .caja5{
+  grid-area: caja5;
+  background-color: #fb8500;
+ }
+
+ @media(max-width:760px){
+.contenedor{
+display:grid;
+grid-template-areas: 
+"caja1 caja1"
+"caja2 caja3"
+"caja4 caja4"
+"caja5 caja5"
+;
+grid-template-columns: 1fr 1fr;
+
+}
+
+ }
+
+ @media(max-width:480px)
+ {
+.contenedor{
+  display: grid;
+  grid-template-areas: 
+  "caja1"
+  "caja2"
+  "caja3"
+  "caja4"
+  "caja5"
+  ;
+  grid-template-columns: 1fr;
+}
+
+ }*/
+ /*
+ .principal div{
+background-color: #fca311;
+padding:1.4em;
+text-align: center;
+font-weight: bold;
+color: #14213d;
+border-radius: 10px;
+
+}
+.sidebar{
+background-color: #14213d;
+color: antiquewhite;
+padding: 1.8em;
+font-size: 1.2em;
+border-radius: 10px;
+
+
+
+}
+.contenedor{
+display: grid;
+grid-template-columns: 220px 1fr;
+gap: 1.5em;
+padding: 1.4em;
+
+}
+.principal{
+display:grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 3;
+grid-template-areas: 
+"caja1 caja2"
+"caja3 caja3"
+"caja4 caja5"
+;
+gap: 1.4em;
+
+}
+
+.caja1{
+grid-area: caja1;
+
+}
+.caja2{
+grid-area: caja2;
+
+}
+.caja3{
+  grid-area: caja3;
+}
+.caja4{
+  grid-area: caja4;
+}
+.caja5{
+  grid-area: caja5;
+}
+/*
+@media (max-width:480px)
+{
+.contenedor{
+grid-template-columns: 1fr;
+
+
+}
+
+.principal{
+grid-template-columns:1fr ;
+grid-template-areas: 
+"caja1"
+"caja2"
+"caja3"
+"caja4"
+"caja5"
+
+
+;
+
+}
+.caja1{
+  grid-area: caja1;
+}
+.sidebar{
+order:2;
+
+}
+
+
+}*/
+.contenedor div{
+background-color: #e9c46a;
+padding: 1.4em;
+border-radius: 10px;
+font-weight: bold;
+flex: 1 1 30%;
+
+
+}
+.sidebar{
+background-color: #14213d;
+color: aliceblue;
+padding: 1.5em;
+border-radius: 10px;
+font-weight: bold;
+flex:1 1 30%;
+
+
+
+}
+.principal{
+  background-color: #264653;
+  padding: 1.5em;
+  flex:2 1 60%;
+
+  
+
+}
+.contenedor{
+display: flex;
+gap: 1.5em;
+padding: 1.5em;
+flex-wrap: wrap;
+
+}
+
+@media (max-width:600px){
+
+.contenedor div,.sidebar{
+flex:1 1 100%;
+
+}
 }

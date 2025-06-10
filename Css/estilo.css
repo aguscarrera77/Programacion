@@ -20,6 +20,7 @@ box-sizing: border-box;
         font-size: 16px;
         font-family: "Roboto",sans-serif;
         
+        
 
     }
 
@@ -36,12 +37,21 @@ box-sizing: border-box;
             display: flex;
             flex-direction: column;
             gap: 1.5em;
-        
+       
  }
+
 .logo{
 width: 540px;
 height: 200px;
 border-radius: 10px;
+animation: aparecerLogo 0.5s ease-out forwards;
+opacity: 1;
+
+}
+@keyframes aparecerLogo{
+from{ opacity: 0; 
+  transform: scale(1.1) rotate(-2deg) }
+to{opacity: 1; transform: scale(1) rotate(0deg);}
 
 }
 
@@ -89,17 +99,20 @@ align-items: center;
 }
 
 .menu1 li a {
-  color: white;
+  display: block;
+  color: whitesmoke;
   text-decoration: none;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 4px;
-  
+  transition: color 1s ease,background-color 1.5s ease;
+
 }
 
 .menu1 li a:hover {
   background-color: #ffffff33;
-  color: #ffcc00;
+  color:#ffcc00;
+  
 }
                         .principal{
                             border: 5px solid black;
@@ -129,6 +142,7 @@ align-items: center;
   .seccion1{
     grid-area: seccion1;
   }
+  
   .seccion2{
     grid-area: seccion2;
   }
@@ -137,6 +151,16 @@ align-items: center;
     grid-area: articulo;
     margin:0.8em;
   }
+
+  .seccion1 h1{
+    animation: fadeIn 1s ease-out 0.4s;
+    position:relative;
+}
+@keyframes fadeIn{
+from{opacity:0; top:30px}
+to{opacity:1;top:0px}
+
+}
 
 
    .seccion3{
@@ -166,19 +190,19 @@ article{margin-top: 10px;}
                                 height: 200px;
                             
                                 margin:10px auto;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
                                 }
                                 .publi a{
                                     color: black;
                                     text-decoration: none;
                                     
                                     }
-                                    
-                                    .inicio:hover{
-                                    color:aliceblue;
-                                    background-color:black ;
+
                                     
                                     
-                                    }
+                                    
                                     footer {
                                         margin-left: 8px;
                                         background-color: rgb(244, 243, 242);
@@ -224,7 +248,9 @@ grid-template-areas:
 ;
 
 
+
 }
+
 
 .nombre{
     grid-area: nombre;
@@ -267,8 +293,36 @@ textarea{
     border: 2px double darkkhaki;
     
 }  
-  
-    
+
+.inicio{
+background-color:rgb(88, 88, 88);
+border-radius: 10px;
+margin: 0.8em;
+font-weight: bold;
+padding: 0.8em;
+border: none;
+cursor: pointer;
+transition:transform 1s ease,background-color 1s ease ;
+}
+.inicio a{
+  color:antiquewhite;
+}
+.inicio:hover{
+transform:scale(1.2);
+background-color: #004a99 ;
+
+
+}
+input, textarea{
+transition: border 0.5s ease, box-shadow 0.5s ease;
+
+}
+input:focus,textarea:focus{
+
+border: 2px solid #5d4b04;
+box-shadow: 0 0 10px blueviolet;
+
+}
 
 
 
