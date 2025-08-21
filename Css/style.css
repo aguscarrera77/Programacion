@@ -378,7 +378,13 @@ height: 200px;
 
 }
 
+.titulo{
+color: #e9c46a;
+background-color: aqua;
+font-weight: bold;
+text-decoration: underline;
 
+}
 @media (max-width:600px){
 
 .contenedor div,.sidebar{

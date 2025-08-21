@@ -1,4 +1,106 @@
-/*let user = "agustin";
+const titulo=document.getElementById('title');/* document entra al DOM y getElementbyId busca el id por su nombre entre comillas
+innerText: sirve para cambiar o agregar texto desde javascript.
+style= cambia estilos del html.*/
+
+
+console.log(titulo.innerText);
+titulo.innerText='Cambie el titulo de entrada al Dom.';
+titulo.style.color='red';
+titulo.style.backgroundColor='black';
+
+/* getElementByClassName: busca las clases de mi html*/
+
+const parrafo=document.getElementsByClassName('parrafo');
+
+/*length: cuenta elementos.*/
+
+console.log(parrafo.length);
+
+for(i=0;i<parrafo.length;i++){
+
+  parrafo[i].style.backgroundColor='yellow';
+}
+
+/*getElementByTagName: llamamos desde del Dom a etiquetas.*/
+
+const parrafos=document.getElementsByTagName('p');
+
+console.log(parrafos.length);
+
+for(let i=0;i<parrafos.length;i++){
+parrafos[i].innerText=parrafos[i].innerText.toUpperCase();
+
+}
+
+/*querySelector= entra al DOM busca la etiqueta y selecciona la primera que coincide*/
+
+let primerParrafo=document.querySelector('p');
+
+console.log(primerParrafo.innerText);
+
+primerParrafo.style.fontWeight='bold';
+
+let agregarParrafo=document.getElementById('mensaje');
+
+primerParrafo.innerText='COMPRAR';
+
+/*querySelectorAll: selecciona todas las coincidencias del Dom etiqueta id class*/
+
+let recorrerLista=document.querySelectorAll('#lista li');
+
+console.log(recorrerLista.length);
+
+/*innerHtml: lee cambia o añade etiquetas de html.*/
+
+console.log(titulo.innerHTML);
+
+titulo.innerHTML='Texto <i>cursiva</i> y <b>negrita</b>';
+
+/*value: es para obtener los valores que pone el usario en los inputs*/
+
+let name=document.getElementById('name');
+let lastName=document.getElementById('last-name');
+let send=document.getElementById('send');
+let message=document.getElementById('message');
+
+send.addEventListener('click',function(){
+message.innerText='Hola '+ name.value + " "+ lastName.value;
+
+});
+
+/*ClassList crea modifica saca y pone una clase o class
+Propiedades: .add agrega un class. remove saca un class. contains */
+
+
+let headline=document.getElementById('titulo');
+let btnCambiar=document.getElementById('btn-cambiar');
+
+btnCambiar.addEventListener('click',()=>{
+headline.classList.toggle('titulo');
+
+
+}
+
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let user='agustin';
 let password = "secreta";
 let acceso = false;
 
@@ -136,7 +238,7 @@ vieneBondi=confirm('Vino el bondi?');
 
 }
 
-console.log('Yendo');*/
+console.log('Yendo');
 
 function contarTres(){
 console.log('uno');
@@ -148,7 +250,7 @@ console.log('tres');
 
 contarTres();
 
-/*Funciones con parametros*/
+/*Funciones con parametros
 
 function saludar(nombre){
 
@@ -172,7 +274,7 @@ return a + b;
 let resultado= sumar(2,5);
 
 alert(resultado);
-/* Funciones Locales: la variable esta dentro de la funcion no esta declarada*/
+/* Funciones Locales: la variable esta dentro de la funcion no esta declarada
 function numAleatorio(){
 let numero=Math.floor(Math.random()*10)+1;
 return numero;
@@ -182,7 +284,7 @@ let aleatorio= numAleatorio();
 
 alert('Su numero de rifa es '+ aleatorio);
 
-/*Variable Global: declaro primero la varible por fuera de la funcion*/
+Variable Global: declaro primero la varible por fuera de la funcion
 
 let contador= 0;
 
@@ -192,9 +294,129 @@ console.log('Su numero es '+ contador);
 
 
 }
+/*Funciones Arrow: No hace falta escribir function/ Puede usar parametros, y si tiene un solo parametro podes omitir los parentesis/Funciones que no tienen nombre son llamadas Funciones anonimas/ En general se guardan en variables(let o const)
+  
+let saludo = nombre=> 'Hola '+ nombre;
 
-const respuestas=()=>{
-  console.log('hola');
+console.log(saludo('agustin'));
+function saludar(nombre){
+  return 'hola '+ nombre;
+}
+function restar(a,b){
+return a - b;
+
 };
 
-respuestas();
+console.log(restar(4,3));
+
+const resta= (a,b)=> a - b;
+
+console.log(resta(4,3));
+
+function porDos(numero){
+return numero * 2;
+
+}
+ console.log(porDos(10));
+
+const multiplico= n=> n*2;
+console.log(multiplico(10));
+
+function promedio(a,b,c){
+  return (a+b-c )/2;
+}
+
+console.log(promedio(10,4,8));
+
+const promiedos=(a,b,c)=> (a+b-c)/2;
+
+console.log(promiedos(10,4,8));
+
+function esPar(number){
+  return number%2===0 ? 'Par': 'Impar';
+}
+console.log(esPar(7));
+console.log(esPar(8));
+
+let esImpar= nu=> nu%2===0 ? 'Par':'Impar';
+
+console.log(esImpar(7));
+console.log(esImpar(10));
+
+Array: es una estructura que almacena valores en una sola variable.
+Es un listado ordenado. Cada elemento tiene su posicion  o como se dice en programacion un indice.
+Posicion de inicio=0!!!!!!!!!!!!!!!!!!!!!!!!!!.
+Sintaxis: let nombre= [0,1,2,3,4.......        ];
+
+let frutas=['manzana','pera','frutilla'];
+
+console.log(frutas[1]);
+console.log(frutas[0]);
+Recorriendo el array con for
+
+for(let i=0;i<frutas.length;i++){
+console.log('La fruta esta en la posicion '+ i +':'+ frutas[i]);
+
+}
+
+Metodos son propiedades que tiene el array y nos permite mejorar su estructura al utilizarlo
+Push() agrega un elemento nuevo al array al final.
+Pop() elimina el ultimo elemento del array.
+join() separador. Traer los elementos del array como un string.Podemos elegir el signo que separa cada uno de los elementos del string.
+length() trae la cantidad de elemenos del array.
+
+
+frutas.push('melon');
+
+console.log(frutas);
+frutas.pop();
+
+let verduleria= frutas.join('/');
+
+console.log(verduleria);
+
+console.log(frutas.length);
+
+shift: elimina el primer elemento del array.
+unshift: agrega elementos al principio del array.
+indexOf: busca la posicion del elemento dentro del array.
+slice: crea una sublista dentro de un array. 
+splice:reemplazar un producto. dentro del parentesis le indico indice y la posicion que borro.
+includes: busca si elemento si existe en el array o no.
+
+
+
+let compras=['pan','leche','huevos','azucar'];
+console.log('Este es mi listado de compras: '+ compras);
+
+compras.shift();
+console.log('Lista Inicial menos pan '+ compras);
+
+compras.unshift('yerba');
+
+console.log('Agregue a mi lista: '+ compras);
+
+let posicionHuevos= compras.indexOf('huevos');
+
+console.log('La posicion del elemento es: ' + posicionHuevos);
+
+compras.push('huevos');
+
+console.log(compras);
+
+console.log(posicionHuevos);
+
+let subLista= compras.slice(1,3);
+console.log('Esta es mi sublista que ideo mi novia: ' + subLista);
+
+compras.splice(2,2,'vino');
+
+console.log('Agrego a la lista que me dieron:'+ compras);
+
+console.log(compras.includes('vino'));
+
+VOY A ENTRAR AL DOM.
+LLAVE DEL DOM: DOCUMENT.
+ID: getElementebyId busca la etiqueta por su id. 1 solo elemento
+innerText:muestra o modifica texto en el html.
+*/
