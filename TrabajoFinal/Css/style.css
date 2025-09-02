@@ -1,0 +1,394 @@
+/* display: posicion de cajas
+block: ocupar todo el ancho del espacio del dise;o.Ej div.
+inline: los elementos se comporten como si fueran en linea.
+inline-block: posicion de las cajas se mantienen en linea y podes manejar las propiedads width y height.
+none: lo aplico para desaparecer una caja.
+flex: alinea las cajas una al lado de la otra activando el modelo flex-box. Display se aplica en el contenedor.
+grid: tomar las cajas y ubicarlas como si fuera una tabla.
+propiedades de grid
+grid template colums
+valores: ancho de cajas en pixeles.
+valores de fracciones: fr. fracciona el ancho de las cajas sobre un 100% del contenedor.
+gap: espaciado entre las cajas de la grilla.
+gap-columns: espacio entre las columnas.
+gap-rows: espacio entre las filas.
+grid-rows:x/x.... marcando las lineas de la grilla siempre arranca en 1 podemos mover las cajas o que ocupen dos o mas espacios de la grilla en esta caso filas.
+grid-columns: x/x. movemos las columnas o hacemos que ocupen dos mas espacios de la grilla.
+grid-template-area: maquetamos las filas y columnas entre comillas.
+luego llamamos a cada caja con su class y agregamos la propiedad grid-area y marcamos la posicion.Ej: grid-area: "caja2 caja2 caja2"
+flex: coloca las cajas una al lado de la otra de manera horizontal.
+flex-direction: da la orden de cual sera el eje principal.
+valores=> row: en fila de izquierda a derecha.
+        center: centra las cajas.
+        columns: columnas de arriba hacia abajo.
+justify;-content: alinea elementos en el eje principal.
+valores=> flex-star,flex-end,center,space-between,space-around,space-evenly.
+align-items: ordena las cajas hijas en el eje cruzado al principal.valores=> stretch,flex-start,flex-end,center,baseline(alinea texto).
+flex-wrap: agrega una linea en nuestro contenedor si la suma de todas las cajas supera el total del ancho/alto del contenedor.
+align-content: acomodar el salto de linea en el eje cruzado.
+CONDICIONES PARA SU FUNCION: que haya multilineas o multicolumnas.
+                            que este activo el flex-wrap.
+                            que la suma total del ancho o alta de las cajas supere al ancho o alto total del contenedor.
+<--------------------------------------------------------->
+PROPIEDADES DE FLEX PARA CAJAS HIJAS.
+Order: darle una ubicacion a una caja en particular.
+flex-grow: en la caja donde la aplicas la propiedad aumentara su ancho de acuerdo al espacio disponible en el contenedor.
+flex-shrink: las cajas se contraen en relacion a las cajas y al espacio que sobre en el contendor.
+flex-basis es darle un witdh inicial a una caja.
+en flex-box reemplaza al witdh.
+flex-grow: 1 (inicio).
+<<<<<<<<<<<<<<<<<<< TRANSFORM TRANSITION ANIMATION>>>>>>>>>>>
+TRANSFORM: transforma el elemento con alguna propiedad.Translate/rotate/scale/skew
+TRANSITION: controla el tiempo y la forma que se transforma el elemento. Sintaxis:transition: propiedad duracion efecto(timing-function) retardo(delay);
+ANIMATION: animaciones que pausan,repiten,ir y volver... se definen por pasos y a traves de @keyframes.
+
+.principal {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contenedor div {
+  width: 120px;
+  height: 100px;
+  background-color: cadetblue;
+  color: rgb(52, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+  
+}
+
+.caja1{
+  animation-name: rotar;
+  animation-duration: 1.5s;
+  animation-delay: 1s;
+}
+
+@keyframes rotar{
+0%{ transform: rotate(0deg);}
+50%{transform:rotate(360deg);}
+100%{transform: rotate(720deg);        }
+
+}
+
+.caja2{
+  animation-name: zoom;
+  animation-duration:2s ;
+  animation-iteration-count: 3;
+}
+
+@keyframes zoom{
+0%{ transform: scale(1);   }
+50%{transform: scale(4);}
+100%{transform: scale(1);}
+}
+
+.caja3{
+animation-name: moviendo;
+animation-duration: 300s;
+animation-iteration-count: 1;
+animation-direction: alternate;
+}
+
+@keyframes moviendo{
+from{transform: translate(0px);}
+to{transform: translate(150px);}
+
+
+}
+
+.caja4{
+
+animation-name: invisible;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+
+}
+
+@keyframes invisible{
+0%{transform:translateY(20px); opacity:0;}
+100%{transform: translateY(0px);opacity: 1;}
+
+}
+*{
+  padding: 0;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+font-family: sans-serif;
+background: #f0f0f0;
+
+}
+.contenedor{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-areas: 
+"caja1 caja2 caja4"
+"caja1 caja3 caja4"
+"caja5 caja5 caja5"
+;
+grid-auto-rows: 200px;
+gap:1em;
+padding:1.4em;
+max-width: 1200px;
+
+
+
+}
+
+.contenedor div{
+display: flex;
+justify-content: center;
+align-items: center;
+
+color:white;
+font-size: 1.5em;
+font-weight: bold;
+border-radius: 10px;
+box-shadow: 0px 4px 10px #000;
+text-shadow: 1px 1px 2px #000;
+
+
+
+
+
+}
+
+ .caja1{
+  grid-area: caja1;
+  background-color: #8ecae6;
+ }
+ .caja2{
+  grid-area: caja2;
+  background-color: #219ebc;
+ }
+
+ .caja3{
+  grid-area:caja3;
+  background-color: #023047;
+ }
+ 
+ .caja4{
+  grid-area: caja4;
+  background-color: #ffb703;
+ }
+ .caja5{
+  grid-area: caja5;
+  background-color: #fb8500;
+ }
+
+ @media(max-width:760px){
+.contenedor{
+display:grid;
+grid-template-areas: 
+"caja1 caja1"
+"caja2 caja3"
+"caja4 caja4"
+"caja5 caja5"
+;
+grid-template-columns: 1fr 1fr;
+
+}
+
+ }
+
+ @media(max-width:480px)
+ {
+.contenedor{
+  display: grid;
+  grid-template-areas: 
+  "caja1"
+  "caja2"
+  "caja3"
+  "caja4"
+  "caja5"
+  ;
+  grid-template-columns: 1fr;
+}
+
+ }*/
+ /*
+ .principal div{
+background-color: #fca311;
+padding:1.4em;
+text-align: center;
+font-weight: bold;
+color: #14213d;
+border-radius: 10px;
+
+}
+.sidebar{
+background-color: #14213d;
+color: antiquewhite;
+padding: 1.8em;
+font-size: 1.2em;
+border-radius: 10px;
+
+
+
+}
+.contenedor{
+display: grid;
+grid-template-columns: 220px 1fr;
+gap: 1.5em;
+padding: 1.4em;
+
+}
+.principal{
+display:grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: 3;
+grid-template-areas: 
+"caja1 caja2"
+"caja3 caja3"
+"caja4 caja5"
+;
+gap: 1.4em;
+
+}
+
+.caja1{
+grid-area: caja1;
+
+}
+.caja2{
+grid-area: caja2;
+
+}
+.caja3{
+  grid-area: caja3;
+}
+.caja4{
+  grid-area: caja4;
+}
+.caja5{
+  grid-area: caja5;
+}
+/*
+@media (max-width:480px)
+{
+.contenedor{
+grid-template-columns: 1fr;
+
+
+}
+
+.principal{
+grid-template-columns:1fr ;
+grid-template-areas: 
+"caja1"
+"caja2"
+"caja3"
+"caja4"
+"caja5"
+
+
+;
+
+}
+.caja1{
+  grid-area: caja1;
+}
+.sidebar{
+order:2;
+
+}
+
+
+}*/
+.contenedor div{
+background-color: #e9c46a;
+padding: 1.4em;
+border-radius: 10px;
+font-weight: bold;
+flex: 1 1 30%;
+
+
+}
+.sidebar{
+background-color: #14213d;
+color: aliceblue;
+padding: 1.5em;
+border-radius: 10px;
+font-weight: bold;
+flex:1 1 30%;
+
+
+
+}
+.principal{
+  background-color: #264653;
+  padding: 1.5em;
+  flex:2 1 60%;
+
+  
+
+}
+.contenedor{
+display: flex;
+gap: 1.5em;
+padding: 1.5em;
+flex-wrap: wrap;
+
+}
+.logo{
+  width: 200px;
+  height: auto;
+}
+
+.navbar .nav-link:hover{
+color:red;
+transition: color 0.5s ease;
+
+
+
+}
+.carousel-item img{
+max-height: 500px;
+object-fit: cover;
+border-radius: 10px;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon
+{
+background-color: aquamarine;
+border-radius: 10px;
+padding: 1.5rem;
+margin:  0 1rem;
+
+}
+.tarjeta1{
+height: 200px;
+
+
+}
+
+.titulo{
+color: #e9c46a;
+background-color: aqua;
+font-weight: bold;
+text-decoration: underline;
+
+}
+@media (max-width:600px){
+
+.contenedor div,.sidebar{
+flex:1 1 100%;
+
+}
+}

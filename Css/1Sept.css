@@ -1,0 +1,18 @@
+/* Construccion de estilo para modo claro que es el punto de inicio de nuestro diseno*/
+
+body{
+background-color: aliceblue;
+color: rgb(6, 5, 5);
+transition: background-color 1s,color 1s;
+}
+
+body.dark-mode{
+background-color: #121212;
+color: aliceblue;
+
+}
+section.dark-mode{
+background-color: #1e1e1e;
+color:beige
+
+}
