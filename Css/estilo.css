@@ -1,0 +1,346 @@
+/* Indicadores o Selectores
+universal: aplicada a todo el archivo html *
+etiqueta: nombro la etiqueta que le voy a aplicar el estilo ej: p,img.
+clase: html: atributo class. css: .nombre de la clase.
+id: html:atributo id. Css: #nombre del id.
+*/
+
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+    }
+ #cuerpo{
+       
+        color: #040900;
+        padding:20px;
+        background-color: aliceblue;
+        font-size: 16px;
+        font-family: "Roboto",sans-serif;
+        
+        
+
+    }
+
+  .encabezado {
+            margin: 0px auto;/*centrar la caja*/
+            border-radius: 8px;
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            background-color: rgb(242, 242, 248);
+            padding: 20px;/*regla de diseño*/
+            /*position: sticky;fija menu al hacer scroll*/
+            top:0px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5em;
+       
+ }
+
+.logo{
+width: 540px;
+height: 200px;
+border-radius: 10px;
+animation: aparecerLogo 0.5s ease-out forwards;
+opacity: 1;
+
+}
+@keyframes aparecerLogo{
+from{ opacity: 0; 
+  transform: scale(1.1) rotate(-2deg) }
+to{opacity: 1; transform: scale(1) rotate(0deg);}
+
+}
+
+.titulo {
+                text-align: center;
+                text-decoration: underline;
+                font-family: sans-serif;
+                font-size: 2rem;
+                margin: 0;
+                padding: 0.5;
+                
+                
+                 }
+.box-superior{
+display:flex;
+justify-content: space-between;
+flex-direction: row-reverse;
+
+}
+.logo-box{
+    flex:0 0 auto;
+}
+
+.titulo-box{
+display: flex;
+align-items: center;
+
+}
+                
+ .navegador {
+  background-color: #003366;
+  padding: 10px 0;
+}
+
+.menu1 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu1 li {
+  margin: 0 15px;
+}
+
+.menu1 li a {
+  display: block;
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 1s ease,background-color 1.5s ease;
+
+}
+
+.menu1 li a:hover {
+  background-color: #ffffff33;
+  color:#ffcc00;
+  
+}
+                        .principal{
+                            border: 5px solid black;
+                            width: 90%;
+                        margin:0 auto;
+                            
+                            display: grid;
+                            grid-template-areas: 
+                            "seccion1 seccion2"
+                            "articulo articulo"
+                            
+                            
+                            
+                            
+                            ;
+
+                            }
+                            
+                            .seccion1,.seccion2{
+                            height: 800px;
+                            border: 2px solid black;
+                            margin:10px 10px;
+                            padding: 20px;
+                            width: 500px;
+                            }
+
+  .seccion1{
+    grid-area: seccion1;
+  }
+  
+  .seccion2{
+    grid-area: seccion2;
+  }
+
+  .articulo{
+    grid-area: articulo;
+    margin:0.8em;
+  }
+
+  .seccion1 h1{
+    animation: fadeIn 1s ease-out 0.4s;
+    position:relative;
+}
+@keyframes fadeIn{
+from{opacity:0; top:30px}
+to{opacity:1;top:0px}
+
+}
+
+
+   .seccion3{
+                                width: 90%;
+                                height:250px ;
+                                margin:0 auto ;
+                                background-color: cadetblue;
+                                border-radius: 10px;
+
+                            }
+article{margin-top: 10px;}
+
+                            .texto1{
+                                border:2px solid greenyellow;
+                                font-family: "Roboto";
+                                font-weight: bold;
+                            font-size:16px;/*regla de diseño para las fuentes*/
+   
+                                
+                                }
+
+                                
+                                .publi{
+                                border:5px double 
+                                orangered;
+                                width: 90%;
+                                height: 200px;
+                            
+                                margin:10px auto;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                }
+                                .publi a{
+                                    color: black;
+                                    text-decoration: none;
+                                    
+                                    }
+
+                                    
+                                    
+                                    
+                                    footer {
+                                        margin-left: 8px;
+                                        background-color: rgb(244, 243, 242);
+                                        width: 90%;
+                                        background-repeat: repeat;
+                                        margin-top: 40px;
+                                        margin:0 auto ;
+                                        
+                                        
+                                       }
+                                       
+                                       legend {
+                                        color:blue;
+                                        font-family: "Roboto";
+                                        text-transform: uppercase;
+                                        
+                                        }
+                                        label{
+                                            color:#040900;
+                                            font-weight: bold;
+                                            
+                                            }
+input {
+width: 95%;
+border-radius: 8px;
+padding:0.5em ;
+
+
+
+}
+.marco-form{
+display: grid;
+gap: 0.8em;
+padding: 1em;
+grid-template-columns: repeat(2,1fr);
+grid-template-areas: 
+"nombre apellido"
+"dni mail"
+"password date"
+"textarea textarea"
+"botones-form botones-form"
+
+;
+
+
+
+}
+
+
+.nombre{
+    grid-area: nombre;
+}
+.apellido{
+    grid-area: apellido;
+
+}
+.dni{
+    grid-area: dni;
+}
+.mail{
+
+  grid-area: mail;  
+}
+.botones-form{
+    grid-area: botones-form;
+    gap: 10px;
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    
+
+
+    
+    
+}
+.textarea{
+    grid-area: textarea;
+    margin: 0 ;
+
+
+}
+    
+
+textarea{
+    width: 100%;
+    border-radius: 0.5em;
+    border: 2px double darkkhaki;
+    
+}  
+
+.inicio{
+background-color:rgb(88, 88, 88);
+border-radius: 10px;
+margin: 0.8em;
+font-weight: bold;
+padding: 0.8em;
+border: none;
+cursor: pointer;
+transition:transform 1s ease,background-color 1s ease ;
+}
+.inicio a{
+  color:antiquewhite;
+}
+.inicio:hover{
+transform:scale(1.2);
+background-color: #004a99 ;
+
+
+}
+input, textarea{
+transition: border 0.5s ease, box-shadow 0.5s ease;
+
+}
+input:focus,textarea:focus{
+
+border: 2px solid #5d4b04;
+box-shadow: 0 0 10px blueviolet;
+
+}
+
+
+
+/*
+ding: espacio interno entre elemento y borde.
+borde: propiedad border agrega bordes a las cajas.
+marggin: espacio externo. Espacio entre cajas vecinas.
+Ordenes para mi diseño::
+
+Inicio de mi diseño margin: 0 y padding 0. Reseteo configuracion de navegadores. 
+Body:Margen izquierdo 8px.
+header: 100% o 95% segun la maquetacion.
+darle color.
+titulo de header: centrar.
+Menu: posicionar mi menu de manera horizontal.
+    espacios entre botones.
+    sacamos viñetas.
+    sacamos subrayado a los enlaces.
+
+*/
+
