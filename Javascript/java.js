@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 const titulo=document.getElementById('title');/* document entra al DOM y getElementbyId busca el id por su nombre entre comillas
 innerText: sirve para cambiar o agregar texto desde javascript.
 style= cambia estilos del html.*/
@@ -909,5 +908,5 @@ document.getElementById('botonReemplazar').addEventListener('click',reemplazarPr
 
 
 
->>>>>>> 744d0aa50b1e6b699fe07f57c543bb9c7fcb267f
+
 

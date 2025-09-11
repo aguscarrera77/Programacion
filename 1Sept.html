@@ -6,6 +6,7 @@
     <title>Modo Claro/Modo Oscuro</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="Css/1Sept.css">
 
 </head>
@@ -15,7 +16,7 @@
 <button id="modo-btn" class="btn btn-dark">DARK-MODE</button>
 </header>
 <main class="container p-3 mt-3">
-<section id="cursos"  class="p-3 bg-info rounded shadow">
+<section id="cursos"  class="p-3  rounded shadow">
 <h2>Cursos</h2>
 <p>Listado de cursos disponibles</p>
 <button id="cursos-btn" class="btn btn-dark">DARK-MODE</button>
@@ -25,7 +26,7 @@
 
 
 
-<section id="compras"class="mt-2 p-3 bg-info rounded shadow" >
+<section id="compras"class="mt-2 p-3  rounded shadow" >
 <h2>Listado de compras realizadas</h2>
 <p>Muestra de las acciones realizadas por nuestra Cooperadora</p>
 <button id="btn-compras" class="btn btn-dark">DARK-MODE</button>
@@ -46,17 +47,44 @@
 
 
 </section>
+<section class="section-menu">
+<h2>Menu hamburguesa</h2>
+
+<button id="btn-menu" class="btn-menu"><i class="bi bi-list"></i></button>
+<nav id="menu" class="menu">
+<ul>
+<li>Inicio</li>
+<li>Cursos</li>
+<li>Contacto</li>
+</ul>
+</nav>
+</section>
+<section>
+<h1>Bienvenidos al contenido secundario de la pagina</h1>
+<p>Informacion secundaria.</p>
 
 
+</section>
+
+<h2>Formulario de contacto</h2>
+
+<form action="" id="formulario">
+<input type="text" placeholder="Nombre" id="nombre">
+<br><br>
+<input type="email" placeholder="Email" id="mail">
+<br><br>
+<input type="number" placeholder="telefono" id="telefono">
+<br><br>
+<input type="number"  id="edad" placeholder="tu edad">
+<br><br>
+<textarea name="" id="mensaje" placeholder="Deja aqui tus comentarios"></textarea>
+<br><br>
+<button id="btn" type="submit">Enviar Datos</button>
 
 
+</form>
 
-
-
-
-
-
-
+<div id="respuesta"></div>
 
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
