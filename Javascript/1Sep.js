@@ -93,35 +93,60 @@ formulario.reset();
 
 formulario.addEventListener('submit',function(e){
 e.preventDefault();
+/*limpiar en la recarga.*/
+document.getElementById('error-nombre').textContent='';
+document.getElementById('error-mail').textContent='';
+document.getElementById('error-telefono').textContent='';
+document.getElementById('error-edad').textContent='';
+document.getElementById('error-mensaje').textContent='';
+respuesta.innerHTML='';
+/*entro al dom busco los inputs y captura los valores y no deja espacio vacios*/
 const nombre=document.getElementById('nombre').value.trim();
 const mail=document.getElementById('mail').value.trim();
 const telefono=document.getElementById('telefono').value.trim();
 const edad=document.getElementById('edad').value.trim();
 const mensaje=document.getElementById('mensaje').value.trim();
-if(nombre==="" ||mail===""|| telefono===""|| edad===""|| mensaje===""){
-respuesta.innerHTML="<p class='error'> Todos los campos son obligatorios";
-return;};
 
-/*Validar Mail*/
-const mailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if(!mailRegex.test(mail)){
-respuesta.innerHTML="<p class='error'> Mail invalido</p>"
-return;
+let validaciones= false;
+/*VALIDACIONES*/
+if(!nombre){
+document.getElementById('error-nombre').textContent="Campo obligatorio,ingrese su nombre";
+validaciones=true;
+} 
+ const mailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+if(!mail){
+document.getElementById('error-mail').textContent='Mail es obligatorio';
+validaciones=true;
+}else if(!mailRegex.test(mail)){
+  document.getElementById('error-mail').textContent='Su mail es invalido.';
+  validaciones=true;
+}
+
+ if(!/^\d{7,}$/.test(telefono)){
+document.getElementById('error-telefono').textContent="Telefono debe tener al menos 7 digitos.";
+validaciones=true;
 
 }
-/*VALIDAR TELEFONO*/
-if(!/^\d{7,}$/.test(telefono)){
-respuesta.innerHTML="<p class='error'>Telefono invalido debe tener minimo 7 numeros</p>";
-return;
+
+const edadNumber = Number(edad);
+    if (edadNumber<1 || edadNumber>120){
+document.getElementById('error-edad').textContent="La edad deber ser de 1 a 120";
+validaciones=true;
+
+    };
+if(!mensaje){
+
+document.getElementById('error-mensaje').textContent='Escriba un mensaje por favor';
+validaciones=true;
+
 }
+if(validaciones)return;/*Corta si hay errores en la comparacion de la variable validaciones*/
+Swal.fire({
+  title: "Buen trabajo",
+  text: "Sus datos fueron enviados.!",
+  icon: "success"
+});
+/*Si todo este quilombo esta correcto que no hay errores y las condiciones se cumplen se envia el formulario y necesita generar texto de confirmacion*/
+formulario.reset();
 })
-
-/*VALIDAR EDAD*/
-
-const edadNumber=Number(edad);
-if(edadNumber>1 || edadNumber<120){
-respuesta.innerHTML='<p class="error"> Su edad es incorrecta, la edad sugerida es de 1 a 120 anos</p>';return;
-
-}
-
 

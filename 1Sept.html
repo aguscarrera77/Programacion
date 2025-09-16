@@ -69,15 +69,26 @@
 <h2>Formulario de contacto</h2>
 
 <form action="" id="formulario">
+
+ <label for="nombre">Nombre</label>   
 <input type="text" placeholder="Nombre" id="nombre">
+<p id="error-nombre"></p>
 <br><br>
+<label for="mail">Mail</label>
 <input type="email" placeholder="Email" id="mail">
+<p id="error-mail"></p>
 <br><br>
+<label for="telefono">Telefono</label>
 <input type="number" placeholder="telefono" id="telefono">
+<p id="error-telefono"></p>
 <br><br>
+<label for="edad">Edad</label>
 <input type="number"  id="edad" placeholder="tu edad">
+<p id="error-edad"></p>
 <br><br>
+<label for="mensaje">Comentarios</label>
 <textarea name="" id="mensaje" placeholder="Deja aqui tus comentarios"></textarea>
+<p id="error-mensaje"></p>
 <br><br>
 <button id="btn" type="submit">Enviar Datos</button>
 
@@ -87,6 +98,7 @@
 <div id="respuesta"></div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="Javascript/1Sep.js"></script>
 </body>
