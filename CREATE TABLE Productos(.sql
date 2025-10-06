@@ -1,0 +1,39 @@
+CREATE TABLE Productos(
+Id_Producto INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+Nombre VARCHAR(50) NOT NULL,
+Precio DECIMAL(10,2),
+Stock INT,
+Descripcion VARCHAR(50)
+);
+
+AGREGO LOS PRODUCTOS.
+
+INSERT INTO productos(`Nombre`,`Precio`,`Stock`,`Descripcion`)
+VALUES ('Samsung S2',200000,10,'Celular'),
+('Lenovo Razer',340000,4,'Computacion'),
+('Iphone 17',800000,2,'Celular'),
+('Heladera LG',740000,3,'Electrodomestico'),
+('Iphone 17Pro',950000,5,'Celular');
+
+EDITAMOS UNO DE LOS VALORES.
+
+UPDATE productos SET Precio= 759999 WHERE Id_Producto=1;
+
+AUMENTO 5 PRODUCTOS A MI STOCK ORIGINAL.
+
+UPDATE productos
+SET Stock= Stock+5
+WHERE Nombre='Heladera Lg';
+
+AUMENTAR PRECIO CON PORCENTAJE.
+
+UPDATE productos SET Precio= Precio * 1.10 WHERE Descripcion='Celular';
+
+RELACIONES ENTRE TABLAS.
+CREATE TABLE Cursos( Numero_Curso INT AUTO_INCREMENT PRIMARY KEY, Nombre VARCHAR(50), Instructor VARCHAR(50) ) ENGINE=INNODB;
+
+CREATE TABLE Alumnos( Id_Alumno INT PRIMARY KEY AUTO_INCREMENT, Nombre VARCHAR(50), Edad INT, Numero_Curso INT, INDEX(Numero_Curso), FOREIGN KEY(Numero_Curso) REFERENCES Cursos(Numero_Curso) )ENGINE=INNODB;
+
+ANCLAJE FORMULARIO BASE DE DATOS MUY IMPORTANTE!!!!!
+
+CREATE TABLE Clientes( Id_Cliente INT AUTO_INCREMENT PRIMARY KEY, NOMBRE VARCHAR(50), MAIL VARCHAR(90), DNI INT(10), FECHA_NACIMIENTO DATE);

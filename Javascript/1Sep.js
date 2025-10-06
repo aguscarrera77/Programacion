@@ -144,6 +144,7 @@ if(validaciones)return;/*Corta si hay errores en la comparacion de la variable v
 Swal.fire({
   title: "Buen trabajo",
   text: "Sus datos fueron enviados.!",
+  background:"red",
   icon: "success"
 });
 /*Si todo este quilombo esta correcto que no hay errores y las condiciones se cumplen se envia el formulario y necesita generar texto de confirmacion*/
